@@ -12,7 +12,7 @@ class Price extends Component {
         <div id="input-wrapper">
           <input
             type="number"
-            value="1"
+            placeholder="1"
             min="1"
             max={this.props.max}
             id="textInput"
@@ -20,7 +20,7 @@ class Price extends Component {
           <strong>TO</strong>
           <input
             type="number"
-            value={this.props.max}
+            placeholder={this.props.max}
             id="textInput"
             min="1"
             max={this.props.max}
