@@ -40,7 +40,7 @@ class Colour extends Component {
           {this.props.colourData.map((x) => {
             return (
               <label id="container">
-                <div style={{ color: x.code }} id="colorBox">
+                <div id="colorBox">
                   <img
                     src={`https://a.nooncdn.com/cms/pages/20181025/0ce4c3a5d392155933d4571ef91fc179/${x.code}.svg`}
                     id="colorSvg"

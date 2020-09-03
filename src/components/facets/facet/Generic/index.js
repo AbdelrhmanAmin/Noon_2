@@ -7,6 +7,12 @@ class Generic extends Component {
   }
   state = {
     collapse: true,
+    show: false,
+  };
+  shower = () => {
+    this.setState({
+      show: !this.state.show,
+    });
   };
   toggler = (e) => {
     const target = this.div.current;
@@ -37,20 +43,61 @@ class Generic extends Component {
           </div>
         </div>
         <div id="drawer" ref={this.div}>
-          {this.props.data.map((x) => {
-            return (
-              <label id="checkbox-container">
-                <div id="left-row">
-                  <input type="checkbox" />
-                  <span>{x.name}</span>
-                </div>
-                <div id="right-row">({x.count})</div>
-              </label>
-            );
-          })}
+          {this.state.show == false
+            ? this.props.data.length > 5
+              ? this.props.data.splice(0, 5).map((x) => {
+                  return (
+                    <label id="checkbox-container">
+                      <div id="left-row">
+                        <input type="checkbox" />
+                        <span>{x.name}</span>
+                      </div>
+                      <div id="right-row">({x.count})</div>
+                    </label>
+                  );
+                })
+              : this.props.data.map((x) => {
+                  return (
+                    <label id="checkbox-container">
+                      <div id="left-row">
+                        <input type="checkbox" />
+                        <span>{x.name}</span>
+                      </div>
+                      <div id="right-row">({x.count})</div>
+                    </label>
+                  );
+                })
+            : this.props.data.map((x) => {
+                return (
+                  <label id="checkbox-container">
+                    <div id="left-row">
+                      <input type="checkbox" />
+                      <span>{x.name}</span>
+                    </div>
+                    <div id="right-row">({x.count})</div>
+                  </label>
+                );
+              })}
+          {this.props.name == "Seller" ? (
+            <span onClick={this.shower} id="shower">
+              {this.state.show ? "See Less" : "See All"}
+            </span>
+          ) : null}
         </div>
       </div>
     );
   }
 }
 export default Generic;
+
+// this.props.data.map((x) => {
+//   return (
+//     <label id="checkbox-container">
+//       <div id="left-row">
+//         <input type="checkbox" />
+//         <span>{x.name}</span>
+//       </div>
+//       <div id="right-row">({x.count})</div>
+//     </label>
+//   );
+// })

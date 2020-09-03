@@ -5,7 +5,7 @@ class Facets extends Component {
   render() {
     return (
       <div>
-        <Facet data={this.props.data} />
+        <Facet data={this.props.data} dir={this.props.dir} />
       </div>
     );
   }

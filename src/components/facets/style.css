@@ -76,7 +76,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 95%;
   vertical-align: baseline;
 }
 a,
@@ -88,7 +88,7 @@ i {
   padding: 4px;
   border: 1px solid #e2e5f1;
   border-radius: 3px;
-  max-width: 90px;
+  width: 95px;
   margin: 0;
   font-size: 0.91666667rem !important;
   align-items: center;
@@ -105,6 +105,13 @@ i {
   box-sizing: border-box;
   cursor: pointer;
   padding: 8px 0 0 0;
+}
+#shower {
+  cursor: pointer;
+  color: #3866df;
+  margin: 8px 0;
+  font-size: 12px;
+  text-align: center;
 }
 #heading {
   padding: 12px 30px;
@@ -131,7 +138,7 @@ i {
   justify-content: space-between;
   align-items: center;
   color: black;
-  font-size: 12px;
+  /* font-size: 12px; */
 }
 #checkbox-container:hover,
 #left-row > span:hover {
@@ -143,6 +150,7 @@ input:hover {
 #drawer {
   display: grid;
   color: black;
+  font-size: 15px;
 }
 #left-row {
   justify-content: flex-start;
@@ -159,7 +167,7 @@ input:hover {
   align-items: center;
 }
 #left-row span {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 #input-wrapper {
   display: flex;
@@ -192,13 +200,18 @@ nav > span:last-child {
   -ms-flex: 1;
   flex: 1;
   min-width: 0;
-  max-width: 20%;
+  max-width: 30%;
   border: 1px solid #e2e5f1;
   margin: 0 10px;
 }
 #colorSvg {
+  width: 25px;
   height: 30px;
 }
 h1 {
   font-size: 1.5rem;
+  color: #404553;
+}
+strong {
+  color: #404553;
 }

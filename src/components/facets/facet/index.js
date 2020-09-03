@@ -35,7 +35,9 @@ class Facet extends Component {
             return <Colour colourData={v.data} name={v.name} />;
           }
           if (v.name == "Category") {
-            return <Category name={v.name} data={v.data} />;
+            return (
+              <Category name={v.name} data={v.data} dir={this.props.dir} />
+            );
           }
           if (v.name == "Fulfillment") {
             return <Fulfillment name={v.name} data={v.data} />;
@@ -52,8 +54,3 @@ class Facet extends Component {
   }
 }
 export default Facet;
-
-/*
-   //     console.log(v);
-      //     
-*/

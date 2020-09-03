@@ -21,6 +21,7 @@ class Category extends Component {
     }
   };
   render() {
+    console.log(this.props.dir);
     return (
       <div>
         <div>
@@ -42,7 +43,11 @@ class Category extends Component {
               return (
                 <label id="checkbox-container">
                   <div id="left-row">
-                    <span>{x.name}</span>
+                    {x.code == this.props.dir ? (
+                      <strong>{x.name}</strong>
+                    ) : (
+                      <span>{x.name}</span>
+                    )}
                   </div>
                   <div id="right-row">({x.count})</div>
                 </label>

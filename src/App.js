@@ -24,6 +24,7 @@ class App extends Component {
     }
   };
   render() {
+    console.log(Data[0].breadcrumbs[0].code);
     return (
       <div>
         <nav id="dir" ref={this.myRef}>
@@ -31,7 +32,7 @@ class App extends Component {
         </nav>
         <div className="App">
           <div id="Facets">
-            <Facets data={Data[0].facets} />
+            <Facets data={Data[0].facets} dir={Data[0].breadcrumbs[0].code} />
           </div>
           <div>
             <h1 id="huge">CONTENT</h1>

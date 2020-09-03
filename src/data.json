@@ -1,11 +1,7 @@
 [
   {
     "breadcrumbs": [
-      { "name": "Sports & Fitness", "code": "sports-and-outdoors" },
-      {
-        "name": "Cycling & Endurance",
-        "code": "sports-and-outdoors/cycling-16009"
-      }
+      { "name": "Sports & Fitness", "code": "sports-and-outdoors" }
     ],
     "nbHits": 5968,
     "nbPages": 120,
