@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Facets from "./components/facets";
+import Headroom from "./components/headroom";
+import Body from "./components/content/body";
 import Data from "./data.json";
 import "./App.css";
 
@@ -8,6 +10,7 @@ class App extends Component {
     super(props);
     this.myRef = React.createRef();
   }
+
   componentDidMount = () => {
     const curr = this.myRef.current;
     {
@@ -26,7 +29,11 @@ class App extends Component {
   render() {
     console.log(Data[0].breadcrumbs[0].code);
     return (
-      <div>
+      <div id="main-app">
+        <Headroom />
+        <div className="bg1"></div>
+        <div className="bg"></div>
+        <div id="bg"></div>
         <nav id="dir" ref={this.myRef}>
           <span>Home </span>
         </nav>
@@ -34,9 +41,7 @@ class App extends Component {
           <div id="Facets">
             <Facets data={Data[0].facets} dir={Data[0].breadcrumbs[0].code} />
           </div>
-          <div>
-            <h1 id="huge">CONTENT</h1>
-          </div>
+          <Body />
         </div>
       </div>
     );

@@ -22,7 +22,7 @@ class Fulfillment extends Component {
   };
   render() {
     return (
-      <div>
+      <div style={{ marginBottom: " 15px" }}>
         <div>
           <div id="heading">
             <div id="headCtr">

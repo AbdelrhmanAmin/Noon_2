@@ -46,7 +46,7 @@ class Category extends Component {
                     {x.code == this.props.dir ? (
                       <strong>{x.name}</strong>
                     ) : (
-                      <span>{x.name}</span>
+                      <span style={{ marginLeft: "15px" }}>{x.name}</span>
                     )}
                   </div>
                   <div id="right-row">({x.count})</div>
